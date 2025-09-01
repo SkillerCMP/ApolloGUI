@@ -18,5 +18,7 @@ This repo contains the source for ApolloGUI and a packaged Help file with MOD/AM
 - [Apollo CLI](https://github.com/bucanero/apollo-lib/releases)
 
 
+Iv Added 0build_publish_with_assets.bat this will build a x86 and x64 version of the program. if u feel the need to build it. 
+
 Note: Im no Programer, But AI has Help me alot to put this item out, anyone using bucanero Tool, Savewizard can work with codes a little better.. 
 Hope it helps .. 
