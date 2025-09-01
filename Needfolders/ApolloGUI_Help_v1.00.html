@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ApolloGUI v1.00 — Help</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --panel: #161a22;
+    --text: #e7ecf3;
+    --muted: #9aa4b2;
+    --accent: #7dd3fc;
+    --accent2:#a78bfa;
+    --border: #232837;
+    --good: #86efac;
+    --warn: #fde047;
+    --bad: #fda4af;
+    --code: #0b0f17;
+  }
+  html, body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    padding: 24px 24px 12px;
+    background: linear-gradient(135deg, rgba(125,211,252,.08), rgba(167,139,250,.10));
+    border-bottom: 1px solid var(--border);
+  }
+  header h1 {
+    margin: 0 0 8px 0;
+    font-size: 24px;
+    letter-spacing: .2px;
+  }
+  header p {
+    margin: 0;
+    color: var(--muted);
+  }
+  .container {
+    padding: 16px 24px 32px;
+  }
+  /* Tabs */
+  .tabs {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+  .tab {
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    background: var(--panel);
+    border-radius: 10px;
+    cursor: pointer;
+    color: var(--muted);
+    user-select: none;
+  }
+  .tab.active {
+    color: var(--text);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px rgba(125,211,252,.15) inset, 0 6px 14px rgba(125,211,252,.07);
+  }
+  .panel {
+    display: none;
+    border: 1px solid var(--border);
+    background: var(--panel);
+    border-radius: 14px;
+    padding: 18px;
+  }
+  .panel.active { display: block; }
+  h2 { margin: 6px 0 10px; font-size: 18px; }
+  h3 { color: var(--accent); margin-top: 18px; }
+  p, li { line-height: 1.55; }
+  code, pre {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+  pre {
+    background: var(--code);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px;
+    overflow: auto;
+  }
+  .kbd {
+    border: 1px solid var(--border);
+    background: #0c1017;
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .callout {
+    border-left: 3px solid var(--accent2);
+    background: rgba(167,139,250,.08);
+    padding: 10px 12px;
+    border-radius: 8px;
+    margin: 12px 0;
+    color: #ded8ff;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+  }
+  .card {
+    border: 1px solid var(--border);
+    background: rgba(22,26,34,.7);
+    border-radius: 12px;
+    padding: 12px;
+  }
+  .pill { color: var(--muted); font-size: 12px; border: 1px solid var(--border); padding: 2px 6px; border-radius: 999px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  ul.tight > li { margin-bottom: 6px; }
+  .small { color: var(--muted); font-size: 13px; }
+  .good { color: var(--good); }
+  .warn { color: var(--warn); }
+  .bad  { color: var(--bad); }
+</style>
+</head>
+<body>
+<header>
+  <h1>ApolloGUI v1.00 — Help</h1>
+  <p>Quick reference for windows, workflows, and the in‑file MOD syntax.</p>
+</header>
+
+<div class="container">
+  <nav class="tabs" id="tabs"></nav>
+  <section id="panels"></section>
+</div>
+
+<script>
+const sections = [
+  {
+    id: "overview",
+    title: "Overview",
+    html: `
+      <h2>What is ApolloGUI?</h2>
+      <p><strong>ApolloGUI</strong> is a WPF tool for browsing, previewing, and patching save‑patch entries (e.g., <code>.savepatch</code> files). It supports selectable entries, fast preview, and a flexible <em>MOD</em> syntax embedded in the text to generate dynamic values at patch time.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Core flow</h3>
+          <ul class="tight">
+            <li>Load database / patch file(s).</li>
+            <li>Select entries (or use <span class="pill">Apply All</span>).</li>
+            <li>Resolve any <code>{AMOUNT:...}</code> and <code>{MOD}</code> prompts.</li>
+            <li>Build preview, then patch with your configured tool.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Windows</h3>
+          <ul class="tight">
+            <li><strong>Main Window</strong>: browse &amp; preview entries, quick actions.</li>
+            <li><strong>Collector</strong>: shows the working set for patching.</li>
+            <li><strong>MOD Editor</strong>: define / validate <code>[MODS:]</code> blocks.</li>
+            <li><strong>Settings</strong>: paths, themes, database choice.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="callout"><strong>Tip:</strong> ApolloGUI can complete “half” Save Wizard lines when a placeholder yields the trailing value (see <em>Amount &amp; SW notes</em>).</div>
+    `
+  },
+  {
+    id: "main",
+    title: "Main Window",
+    html: `
+      <h2>Main Window</h2>
+      <p>Use the left tree/list to pick a game and its codes; the right pane previews the resolved output. Use the checkboxes to stage items.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Key actions</h3>
+          <ul class="tight">
+            <li><strong>Add to Collector</strong>: Double Click to Stage it to Collector.</li>
+            <li><strong>Preview</strong>: shows the resolved bytes with active MODs and AMOUNTs.</li>
+            <li><strong>Search / Sort</strong>: filter by name, optionally sort per your settings.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Apply buttons</h3>
+          <ul class="tight">
+            <li><span class="pill">Move Checked to Collector</span>: Moves Any Checkmarked, Codes to the Collector.</li>
+            <li><span class="pill">Reset All To Database</span>: Resets Codes Back To Normal Does Not Change Your Collector Added Codes.</li>
+			<li><span class="pill">Backups</span>: Your Files Will Auto Backup, So You Can Restore The One You Want.</li>
+		  </ul>
+        </div>
+      </div>
+    `
+  },
+  {
+    id: "collector",
+    title: "Collector",
+    html: `
+      <h2>Collector Window</h2>
+      <p>The Collector is your staging area prior to building and patching.</p>
+      <ul class="tight">
+        <li>Each item shows its selection state and whether it needs inputs (e.g., an <code>{AMOUNT}</code> value).</li>
+        <li><strong>Apply Checked</strong> runs against items with <em>IsChecked = true</em>.</li>
+        <li><strong>Apply All</strong> builds &amp; patches the entire list, regardless of check state.</li>
+        <li>Errors surface inline and in the message dialog; fix inputs and retry.</li>
+      </ul>
+      <div class="callout"><strong>Heads‑up:</strong> If no items are checked and you click <em>Apply Checked</em>, ApolloGUI will warn you. <em>Apply All</em> skips this guard.</div>
+    `
+  },
+  {
+    id: "mods",
+    title: "MOD Editor & Syntax",
+    html: `
+      <h2>MOD Editor &amp; In‑File Syntax</h2>
+      <p>ApolloGUI resolves placeholders embedded in your code text and pairs them with a <code>[MODS:]</code> section. Placeholders look like <code>{NAME}</code> in the code and are defined by a named block inside <code>[MODS:]</code>.</p>
+<pre>[Example Entry]
+2000000C {MOD}
+20000004 {MOD2}
+20000004 {MOD2}
+
+[MODS:]
+{MOD}
+VALUE&gt;NAME
+00000000    Off
+00000001    On
+{\\MOD}
+{MOD2}
+VALUE&gt;NAME&gt;TYPE
+00000000    Ten      HEX
+0000000A    Ten.dec  DEC
+{\\MOD2}</pre>
+
+      <h3>Block anatomy</h3>
+      <ul class="tight">
+        <li><code><strong>{DIGIT}</strong></code> starts a definition; <code><strong>{\\DIGIT}</strong></code> ends it (backslash to close)
+		Make Note: You Must have <strong>{DIGIT}</strong> Block in your code to so it know what Group to pull from Names Can be Anything.</li>
+        <li>Ditgis Info Is Stored In Block You Can Name Them Blocks By Doing <code>VALUE[TAB]NAME</code> or <code>VALUE[TAB]NAME[TAB]TYPE</code>.</li>
+        <li><strong>VALUE</strong> is the raw bytes to inject (usually 8 HEX/DEC chars unless your code needs more or less.</li>
+        <li><strong>NAME</strong> The Name For the DIGIT.</li>
+        <li><strong>TYPE</strong> (optional) Extra Line For Things Like Weapon Types And So On:
+		</li></ul>
+		<h3>Special {MODS}</h3>
+<p>
+  <strong>{AMOUNT:VALUE:TYPE:END}</strong> — Acts like a calculator. You provide a default
+  <code>VALUE</code>, choose a <code>TYPE</code>, and an <code>END</code> (endianness or text mode).
+  At build time, Apollo resolves the placeholder into the correct bytes.
+</p>
+
+<h4>Allowed Values</h4>
+<ul class="tight">
+  <li>
+    <code>NA</code> — No size cap; Apollo auto-sizes the output to fit the entered value.
+  </li>
+  <li>
+    Numeric defaults (<code>DEC</code>/<code>HEX</code>/<code>FLOAT</code>) — The initial
+    <code>VALUE</code> you put here establishes the maximum block size/byte width used when encoding.
+    <span class="small">Examples: 8 hex digits (e.g., <code>FFFFFFFF</code>) → 4 bytes; 16 hex digits
+    → 8 bytes.</span>
+  </li>
+</ul>
+
+<h4>Allowed TYPES</h4>
+<ul class="tight">
+  <li><code>HEX</code> (default) — Interpret <code>VALUE</code> as hexadecimal bytes.</li>
+  <li><code>DEC</code> — Interpret <code>VALUE</code> as a decimal number, then emit its bytes.</li>
+  <li><code>FLOAT</code> — Interpret <code>VALUE</code> as IEEE-754 float, then emit its bytes.</li>
+  <li><code>ABC123</code> — Treat <code>VALUE</code> as TEXT (primarily for Apollo code types).</li>
+</ul>
+
+<h4>Allowed Ends</h4>
+<ul class="tight">
+  <li><code>BIG</code> — Use big-endian byte order (for numeric types).</li>
+  <li><code>LITTLE</code> — Use little-endian byte order (for numeric types).</li>
+  <li><code>TXT</code> — Treat as TEXT (primarily for Apollo code types); ignores endianness.</li>
+</ul>
+      
+
+      <h3>Using placeholders in code</h3>
+<pre>[Give Item]
+880100{Item}
+88010006 00436F75
+6E740000 00000000
+28000020 {Amount:05F5E0FF:HEX:BIG}
+
+[MODS:]
+{Item}
+VALUE&gt;NAME
+00000026    Acid Slash (38)
+0000002A    Iron Ore (42)
+{\\Item}</pre>
+
+      <div class="callout"><strong>Tip:</strong> You can define as many {}Digit blocks as you like inside <code>[MODS:]</code>. If a placeholder has no block, ApolloGUI will warn you during build.</div>
+    `
+  },
+  {
+    id: "syntax",
+    title: "Entry/Text syntax",
+    html: `
+      <h2>Entry / Text file syntax</h2>
+      <ul class="tight">
+        <li>Bracketed title lines name an entry: <code>[My Code Name]</code></li>
+        <li>Hex lines may be chunked by spaces/newlines for readability.</li>
+        <li>Use <code>[MODS:]</code> to declare choice lists for any <code>{NAME}</code> placeholders in the entry.</li>
+        <li>Comments start with <code>;</code> and run to end of line.</li>
+      </ul>
+<pre>[Mod Item Quantity (99999999; Player Inventory; Acid Slash(38))]
+80010016 4C436861 72616374 65724974 656D5361 76654461 74610000 00000000
+88010020 0C000000 506C6179 65724974 656D7300 0E000000 41727261 7950726F 70657274 00000000
+88010026 534B5F50 435F4661 626C655F 41636964 47726561 7453776F 72645F53 6C617368 5F6C6F63 616C0000
+88010006 00436F75 6E740000 00000000
+28000020 {AMOUNT:05F5E0FF:HEX:BIG}
+
+[MODS:]
+{Item}
+VALUE&gt;NAME
+00000026    Acid Slash (38)
+{\\Item}</pre>
+      <p class="callout">ApolloGUI is tolerant of line breaks and spacing; it preserves your layout in preview while normalizing bytes for patching. Codes like the one above when copied to the Collector will auto Correct for 00000000 00000000 Line types and fill any Padding that is needed</p>
+    `
+  },
+  {
+    id: "settings",
+    title: "Settings",
+    html: `
+      <h2>Settings Window</h2>
+      <ul class="tight">
+        <li><strong>Paths</strong>: configure external tools (e.g., <code>tools/patcher.exe</code>), wrapper, and database folder.</li>
+        <li><strong>Database</strong>: pick which patch file set is loaded on startup.</li>
+      </ul>
+      <div class="callout"><strong>Tip:</strong> After changing paths, open the Collector and run a dry build to verify.</div>
+    `
+  },
+  {
+    id: "faq",
+    title: "Troubleshooting",
+    html: `
+      <h2>Troubleshooting</h2>
+      <h3>Missing placeholder block</h3>
+      <p class="small">“Undefined placeholder {Item}” — add a matching <code>{Item}…{\\Item}</code> block inside <code>[MODS:]</code>.</p>
+      <h3>Nothing happens on Apply Checked</h3>
+      <p class="small">No items were checked. Use <em>Apply All</em> to ignore check states.</p>
+      <h3>Weird numbers in preview</h3>
+      <p class="small">Check your <code>TYPE</code> and endianness. For floats, make sure <code>KIND=FLOAT</code>; for big‑endian platforms, use <code>BIG</code>.</p>
+      <h3>Half lines not completing</h3>
+      <p class="small">Ensure your line starts with exactly 8 hex chars and that your placeholder expands to the required trailing bytes.</p>
+    `
+  },
+  {
+    id: "changelog",
+    title: "Changelog",
+    html: `
+      <h2>v1.00</h2>
+      <ul class="tight">
+        <li>Baseline with hover‑preview disabled; checkboxes control staging.</li>
+        <li>Collector supports <em>Apply Checked</em> and <em>Apply All</em> behavior.</li>
+        <li>Enhanced <code>{AMOUNT}</code> and multi‑row <code>[MODS:]</code> parsing.</li>
+        <li>Save‑Wizard half‑line completion.</li>
+      </ul>
+      <p class="small">Keep this file in <code>Help/ApolloGUI_Help_v1.00.html</code> and load via a WebBrowser inside a Help tab, e.g.:</p>
+<pre>&lt;TabItem Header="Help"&gt;
+  &lt;WebBrowser Source="pack://siteoforigin:,,,/Help/ApolloGUI_Help_v1.00.html"/&gt;
+&lt;/TabItem&gt;</pre>
+    `
+  }
+];
+
+const tabs = document.getElementById("tabs");
+const panels = document.getElementById("panels");
+
+sections.forEach((s, i) => {
+  const t = document.createElement("div");
+  t.className = "tab" + (i===0 ? " active" : "");
+  t.textContent = s.title;
+  t.dataset.target = s.id;
+  tabs.appendChild(t);
+
+  const p = document.createElement("article");
+  p.className = "panel" + (i===0 ? " active" : "");
+  p.id = s.id;
+  p.innerHTML = s.html;
+  panels.appendChild(p);
+});
+
+tabs.addEventListener("click", (e) => {
+  const el = e.target.closest(".tab");
+  if (!el) return;
+  const id = el.dataset.target;
+  document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
+  document.querySelectorAll(".panel").forEach(p => p.classList.remove("active"));
+  el.classList.add("active");
+  document.getElementById(id).classList.add("active");
+});
+</script>
+</body>
+</html>

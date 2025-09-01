@@ -1,0 +1,19 @@
+<!-- ============================================================================
+  ApolloGUI — App.xaml
+  Purpose: TODO: brief purpose of this file.
+  Key UI elements: TODO: key types/classes used.
+  Notes: TODO: important usage and gotchas.
+  Version: v1.0.0   Date: 2025-08-31
+  Copyright (c) 2025 Skiller S
+  ============================================================================
+  Change Log:
+    - v1.0.0 (2025-08-31): Repository-ready header added.
+============================================================================ -->
+
+<Application x:Class="ApolloGUI.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             Startup="Application_Startup">
+    <Application.Resources>
+    </Application.Resources>
+</Application>

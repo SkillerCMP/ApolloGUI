@@ -1,0 +1,52 @@
+<!-- ============================================================================
+  ApolloGUI — SettingsWindow.xaml
+  Purpose: Settings dialog UI.
+  Key UI elements: StackPanel, TextBox, ToggleSwitch.
+  Notes: Two-way bindings for settings model.
+  Version: v1.0.0   Date: 2025-08-31
+  Copyright (c) 2025 Skiller S
+  ============================================================================
+  Change Log:
+    - v1.0.0 (2025-08-31): Repository-ready header added.
+============================================================================ -->
+
+<Window x:Class="ApolloGUI.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Settings" Height="260" Width="520" WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Database path:" VerticalAlignment="Center" Margin="0,0,8,0"/>
+        <TextBox x:Name="txtDb" Grid.Column="1" Margin="0,0,6,6"/>
+        <Button Grid.Column="2" Content="..." Width="30" Click="BrowseDb_Click"/>
+
+        <TextBlock Grid.Row="1" Text="Tools path:" VerticalAlignment="Center" Margin="0,0,8,0"/>
+        <TextBox x:Name="txtTools" Grid.Row="1" Grid.Column="1" Margin="0,0,6,6"/>
+        <Button Grid.Row="1" Grid.Column="2" Content="..." Width="30" Click="BrowseTools_Click"/>
+
+        <CheckBox x:Name="chkMetadata" Grid.Row="2" Grid.ColumnSpan="3" Content="Show metadata sections (:* and non-[...])" Margin="0,0,0,8"/>
+        <CheckBox x:Name="chkBackup" Grid.Row="3" Grid.ColumnSpan="3" Content="Enable backups (recommended)" Margin="0,0,0,8"/>
+
+        <TextBlock Grid.Row="4" Text="Backups root:" VerticalAlignment="Center" Margin="0,0,8,0"/>
+        <TextBox x:Name="txtBackups" Grid.Row="4" Grid.Column="1" Margin="0,0,6,6" ToolTip="Defaults to %Root%\Backups when empty"/>
+        <Button Grid.Row="4" Grid.Column="2" Content="..." Width="30" Click="BrowseBackups_Click"/>
+
+        <StackPanel Grid.Row="5" Grid.ColumnSpan="3" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="OK" Width="90" Margin="0,0,6,0" IsDefault="True" Click="OK_Click"/>
+            <Button Content="Cancel" Width="90" IsCancel="True"/>
+        </StackPanel>
+    </Grid>
+</Window>

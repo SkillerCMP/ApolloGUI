@@ -1,0 +1,796 @@
+;CCCC00001
+;Test2
+;source:
+
+:*
+
+
+[Add Item]
+search 0x22706C61796572223A207B
+search next 0x2263617272795F6974656D22
+search next 0x226D5F6C69737422
+Insert Next (1C): "{                     ".ver": 1,                     "m_count": {AMOUNT:99999999:ABC123:TXT},                     "m_item_id": {                         "puid": {ID1}                    }                 },"
+[Add Item3]
+search 0x22706C61796572223A207B
+search next 0x2263617272795F6974656D22
+search next 0x226D5F6C69737422
+Insert Next (1C): "{                     ".ver": 1,                     "m_count": {AMOUNT:NA:ABC123:TXT},                     "m_item_id": {                         "puid": {ID1}                    }                 },"
+ 
+[Add Item 2]
+search 0x22706C61796572223A207B
+search next 0x2263617272795F6974656D22
+search next 0x226D5F6C69737422
+Insert Next (1C): 0x7B202020202020202020202020202020202020202020222E766572223A20312C202020202020202020202020202020202020202020226D5F636F756E74223A2039392C202020202020202020202020202020202020202020226D5F6974656D5F6964223A207B202020202020202020202020202020202020202020202020202270756964223A20
+Insert Next (87): 0x{ID1}20202020202020202020202020202020202020207D20202020202020202020202020202020207D2C
+
+[MODS:]	
+{ID1}
+ID>Name>Type
+3936	Egg	Ingredients
+3937	Quality Egg	Ingredients
+3938	Golden Egg	Ingredients
+3939	Fresh Milk	Ingredients
+313030	Quality Fresh Milk	Ingredients
+313031	Superb Fresh Milk	Ingredients
+31313636	Vermillion Phoenix Ring	Ring-thumb
+31313637	Hawaiian Gold Ring	Ring-Little Finger
+31313638	Azure Dragon Ring	Ring-Little Finger
+31313639	Coconut Ring	Ring-finger
+31313730	Ring Of Blossom	Ring-thumb
+31313731	Black Tortoise Ring	Ring-finger
+31313732	White Tiger Ring	Ring-finger
+31313830	S Ring	Ring-finger
+31323034	Ai's Photobook (Gift Edition)	Miscellany
+31323234	Compass Ring	Ring-finger
+31323235	Voyage Ring	Ring-finger
+31323236	Ring Of Leaves	Ring-finger
+31323237	Ring Of Volcanoes	Ring-finger
+31323238	Ring Of Flowers	Ring-finger
+31323539	Anchor Ring	Ring-thumb
+31333536	Oarfish	Ingredients
+31333830	Hibiscus Tote Bag Gift Set	Miscellany
+31363035	Champion's Ring	Ring-thumb
+31363036	Snake Ring	Ring-finger
+31363037	Hannya Ring	Ring-thumb
+31363038	M Ring	Ring-finger
+31363039	Brilliant Ring	Ring-thumb
+31363134	Ring Of Earth	Ring-thumb
+31363138	Ring Of Frost	Ring-thumb
+31363238	Ring Of Stone	Ring-finger
+31363330	Ring Of Illumination	Ring-finger
+31363331	Ring Of Candescence	Ring-Little Finger
+31363437	Sakura Ring	Ring-Little Finger
+31363535	Ring Of Tides	Ring-finger
+31363536	Ring Of Storms	Ring-Little Finger
+31363537	Ring Of The Tempest	Ring-finger
+31363733	Kraken-Chan	Miscellany
+31363736	Hawaiian Silver Ring	Ring-finger
+31363737	Shark Ring	Ring-finger
+31363738	Cutlass Ring	Ring-thumb
+31363739	Pistol Ring	Ring-thumb
+31363830	Chain Hook Ring	Ring-thumb
+31363839	Scope Ring	Ring-finger
+31363930	Ring Of Gaia	Ring-finger
+31363931	Ring Of The Ocean	Ring-Little Finger
+31363932	Squid Ring	Ring-finger
+31363936	Chain Ring	Ring-finger
+31373032	Squid Tentacles	Miscellany
+31373133	Sacrifice Ring	Ring-Little Finger
+31373332	Essence Of Pet Snacks ★★	Miscellany
+31373335	Pirates Special	Recovery Items
+31373336	Aloha Beer: Mellow Waves	Recovery Items
+31373338	Royal Tea Leaf Gift	Miscellany
+31373339	Quality Onion Seedlings	Miscellany
+31373432	Hors D'oeuvres	Miscellany
+31373439	Empty Can	Miscellany
+31383339	Beautiful Seashell	Miscellany
+31383430	Sharkstone	Miscellany
+31383533	Salmon	Ingredients
+31383537	Bear Meat	Ingredients
+31383539	Rabbit Meat	Ingredients
+31383630	Pheasant Meat	Ingredients
+31383733	Shen-San's Panties	Miscellany
+31383838	Fishing Net	Miscellany
+31393032	Double Silver Ring	Ring-finger
+31393136	Components	Miscellany
+31393137	Quality Components	Miscellany
+31393138	Ethereal Egesta	Miscellany
+31393338	High Seas Kitty Kat (Red)	Miscellany
+31393434	Red Bull	Recovery Items
+32303637	Superb Components	Miscellany
+32313130	High Seas Kitty Kat (Tiger)	Miscellany
+32313137	Raymond Law Figure	Miscellany
+32313138	Moth	Ingredients
+32313139	Spider	Ingredients
+32313230	Big C	Ingredients
+32313336	Free Magazine	Miscellany
+32313337	Fancy Free Magazine	Miscellany
+32313338	Superb Seeds	Miscellany
+32313339	Potato	Ingredients
+32313432	Grasshopper	Ingredients
+32323037	Essence Of Pet Snacks ★★★	Miscellany
+32323131	Aloha Beer: Froot Lupes Ipa	Recovery Items
+32323134	Quality Garlic Seedlings	Miscellany
+32323137	Ice Cream Assortment	Miscellany
+32323234	Runaway Hat	Miscellany
+32323334	Materials Net	Miscellany
+32323432	Plant Nutrient	Miscellany
+32323433	Pirate Boss Bun-Chan	Miscellany
+32323434	Plant Staminan	Miscellany
+32323435	First Mate Bun-Chan (Pink)	Miscellany
+32323436	Plant Staminan Spark	Miscellany
+32323437	Plant Growth Stimulant	Miscellany
+32323534	High Seas Kitty Kat (Blue)	Miscellany
+32323535	Queen Michele Figure	Miscellany
+32323536	High Seas Kitty Kat (Calico)	Miscellany
+32323537	High Seas Kitty Kat (American Short Hair)	Miscellany
+32323630	First Mate Bun-Chan (Orange)	Miscellany
+32323832	Silver Grasshopper	Ingredients
+32323833	Silver Moth	Ingredients
+32323834	Silver Spider	Ingredients
+32323835	Golden Grasshopper	Ingredients
+32323934	Golden Moth	Ingredients
+32323935	Golden Spider	Ingredients
+32323936	Tsuchinoko	Ingredients
+32333637	Goro Goro Supreme Pot Luck Hot Pot★★	Recovery Items
+32333638	Goro Goro Supreme Pot Luck Hot Pot★★★	Recovery Items
+32333639	Deluxe Pizza	Miscellany
+32333730	Sushi Ori	Miscellany
+32333731	Quality Onion	Ingredients
+32333732	Quality Garlic	Ingredients
+32333837	Lunch Assortment	Miscellany
+32333838	Retort Curry Gift	Miscellany
+32343131	How To Be A Mighty Pirate	Miscellany
+32343132	Essence Of Pet Snacks ★	Miscellany
+32343232	Failed Dish	Recovery Items
+32343332	Potato Seedlings	Miscellany
+32343538	Goro Goro Supreme Pot Luck Hot Pot★	Recovery Items
+32343631	Herb Seeds	Miscellany
+32343635	Vintage Luxury Watch	Miscellany
+32343737	Handmade Dried Fruits	Miscellany
+32343738	Fruit Party Platter	Miscellany
+32343931	Torn Magazine	Miscellany
+32343937	Ichiban Pirate Crew Set	Miscellany
+32343938	Ichiban Special Outfit Set	Miscellany
+32353032	How To Be A Pirate	Miscellany
+32353131	Mysterious Net	Miscellany
+33313335	Original Musubi	Recovery Items
+33313336	3 Pack Croissant Sandwich	Recovery Items
+33313337	Pinwheel Wrap	Recovery Items
+33313338	Charcuterie Quiche	Recovery Items
+33313339	Seafood Bisque	Recovery Items
+33313430	Ham & Egg Sandwich	Recovery Items
+33313437	Tuna Salad Sandwich	Recovery Items
+33313438	Roast Ham Sandwich	Recovery Items
+33313536	French Fries	Recovery Items
+33313630	Hot Dog	Recovery Items
+33313631	Chili Dog	Recovery Items
+33313632	Chinese Steamed Bun	Recovery Items
+33313636	Fancy Shark Fin Bun	Recovery Items
+33313637	Chinese Sticky Rice	Recovery Items
+33313638	Chinese Meat Pie	Recovery Items
+33313639	Corn Bun	Recovery Items
+33313730	Fried Dough Twist	Recovery Items
+33313731	Black Sesame Soup	Recovery Items
+33313732	Raisin Sponge Cake	Recovery Items
+33313733	Roasted Chestnuts	Recovery Items
+33313833	Himalayan Salt Potato Chips	Recovery Items
+33313834	Black Truffle Potato Chips	Recovery Items
+33313835	Bbq Potato Chips	Recovery Items
+33313836	Plain Cookie	Recovery Items
+33313837	Special Tacos	Recovery Items
+33313838	Naan	Recovery Items
+33313839	Coconut Chicken Curry	Recovery Items
+33313930	Spinach Curry	Recovery Items
+33313931	Spicy Mutton Curry	Recovery Items
+33313932	Cheese Pizza	Recovery Items
+33313933	Pepperoni Pizza	Recovery Items
+33313934	Hawaiian Pizza	Recovery Items
+33313935	Deluxe Hawaiian Pizza	Recovery Items
+33313936	Beef Plate Lunch	Recovery Items
+33313937	Salmon Plate Lunch	Recovery Items
+33313938	Vegetarian Plate Lunch	Recovery Items
+33313939	Ultra Steak Plate Lunch	Recovery Items
+33323030	California Roll	Recovery Items
+33323031	Spider Roll	Recovery Items
+33323032	Spicy Fried Tofu	Recovery Items
+33323032	Spicy Fried Totu	Recovery Items
+33323033	Nourishing Sushi Set	Recovery Items
+33323033	Nourishing Sushi Set	Recovery Items
+33323034	Rainbow Bagel	Recovery Items
+33323035	Original Açaí Bowl	Recovery Items
+33323036	Tropical Açaí Bowl	Recovery Items
+33323037	Wild-Caught Sashimi	Recovery Items
+33323038	Wild-Caught Fried Shrimp	Recovery Items
+33323131	Ahi Poke	Recovery Items
+33323134	Moldy Burger	Recovery Items
+33323239	Aloha Aina® Hot Coffee	Recovery Items
+33323330	Kona Hawaiian Coffee	Recovery Items
+33323330	Kona Hawaiian Coffee	Recovery Items
+33323331	Aloha Beer: Aloha Blonde	Recovery Items
+33323331	Aloha Beer: Aloha Blonde	Recovery Items
+33323332	Aloha Beer: Hiker's Dream	Recovery Items
+33323332	Aloha Beer: Hiker's Dream	Recovery Items
+33323333	Aloha Beer: Hop Lei Ipa	Recovery Items
+33323334	Mineral Water	Recovery Items
+33323335	Iced Tea	Recovery Items
+33323336	Fruit Juice	Recovery Items
+33323337	Cola	Recovery Items
+33323338	Zero-Calorie Cola	Recovery Items
+33323339	Soda Water	Recovery Items
+33323339	Soda Water	Recovery Items
+33323430	Iced Coffee	Recovery Items
+33323430	Iced Coffee	Recovery Items
+33323431	Café Latte	Recovery Items
+33323432	Hot Coffee	Recovery Items
+33323433	Deluxe Hot Coffee	Recovery Items
+33323434	Deluxe Iced Coffee	Recovery Items
+33323435	Lassi	Recovery Items
+33323436	Boba Milk Tea	Recovery Items
+33323437	Brown Sugar Milk Tea	Recovery Items
+33323438	Coconut Milk Tea	Recovery Items
+33323439	Matcha Milk Tea	Recovery Items
+33323531	Coconut Water	Recovery Items
+33323532	Lemonade	Recovery Items
+33323533	Tony's Lemonade	Recovery Items
+33323537	Hawaiian Pale Ale	Recovery Items
+33323538	Hawaiian Lager	Recovery Items
+33323539	Hawaiian Pilsner	Recovery Items
+33323630	Fancy Coffee (Kopi Luwak)	Recovery Items
+33323631	Fancy Coffee (Black Ivory)	Recovery Items
+33323632	Fancy Sake (Rainbow Bridge)	Recovery Items
+33323633	Divine Water	Recovery Items
+33323634	Half-Empty Drink	Recovery Items
+33323635	Ichiban Special	Recovery Items
+33323636	Rainbow	Recovery Items
+33323637	Matsumoto's	Recovery Items
+33323638	Hawaiian	Recovery Items
+33323639	Tropical	Recovery Items
+33323639	Tropical	Recovery Items
+33323730	Soft-Serve Ice Cream	Recovery Items
+33323730	Soft-Serve Ice Cream	Recovery Items
+33323731	Almond Jelly	Recovery Items
+33323731	Almond Jelly	Recovery Items
+33323732	Mango Pudding	Recovery Items
+33323732	Mango Pudding	Recovery Items
+33323733	Strawberry Shave Ice	Recovery Items
+33323733	Strawberry Shave Ice	Recovery Items
+33323734	Mango Shave Ice	Recovery Items
+33323734	Mango Shave Ice	Recovery Items
+33323735	Blue Hawaiian Shave Ice	Recovery Items
+33323735	Blue Hawaiian Shave Ice	Recovery Items
+33323736	Chocolate Ice Cream	Recovery Items
+33323736	Chocolate Ice Cream	Recovery Items
+33323737	Chocolate Mint Ice Cream	Recovery Items
+33323737	Chocolate Mint Ice Cream	Recovery Items
+33323738	Strawberry Crêpe	Recovery Items
+33323739	Chocolate Banana Crêpe	Recovery Items
+33323830	High-End Assorted Chocolates	Recovery Items
+33323834	Toughness Light	Recovery Items
+33323835	Toughness Z	Recovery Items
+33323836	Toughness ZZ	Recovery Items
+33323837	Toughness Infinity	Recovery Items
+33323838	Tauriner	Recovery Items
+33323839	Tauriner +	Recovery Items
+33323930	Tauriner ++	Recovery Items
+33323931	Tauriner Maximum	Recovery Items
+33323932	Staminan Light	Recovery Items
+33323933	Staminan X	Recovery Items
+33323934	Staminan Xx	Recovery Items
+33323935	Staminan Royale	Recovery Items
+33323936	Staminan Spark	Recovery Items
+33323938	Superb Pineapple	Ingredients
+33333030	Quality Mango	Ingredients
+33333032	Coconut	Ingredients
+33333033	Superb Fruit	Ingredients
+33333034	Herb	Ingredients
+33333231	Pansy Bouquet	Miscellany
+33333232	Lily Bouquet	Miscellany
+33333233	Rose Bouquet	Miscellany
+33333234	Plumeria Bouquet	Miscellany
+33333235	Hibiscus Bouquet	Miscellany
+33333236	Coffee Assortment	Miscellany
+33333237	Hawaiian Cosmetics	Miscellany
+33333238	Postcard Assortment	Miscellany
+33333239	Dim Sum Assortment	Miscellany
+33333330	Beautiful Painting	Miscellany
+33333332	Abc Store Gift Set	Miscellany
+33333333	Aloha Beer Gift Set	Miscellany
+33333334	Matsumoto Shave Ice Gift Set	Miscellany
+33333335	Dean & Deluca Gift Set	Miscellany
+33333336	88 Tees Gift Set	Miscellany
+33333337	Hilo Hattie Gift Set	Miscellany
+33333431	Paper Plate	Miscellany
+33333432	Iron Plate	Miscellany
+33333433	Bronze Plate	Miscellany
+33333434	Silver Plate	Miscellany
+33333435	Gold Plate	Miscellany
+33333436	Platinum Plate	Miscellany
+33333436	Platinum Plate	Miscellany
+33333439	Earthworm	Miscellany
+33333530	Simple Wristwatch	Miscellany
+33333532	Swiss Watch	Miscellany
+33333535	Aiai	Miscellany
+33333536	Gongon	Miscellany
+33333537	Meemee	Miscellany
+33333538	Baby	Miscellany
+33333539	Bun-Chan The Java Sparrow (White)	Miscellany
+33333630	Bun-Chan The Java Sparrow (Pink)	Miscellany
+33333631	Jumbo Bun-Chan	Miscellany
+33333639	Pillow Pup (Golden Retriever)	Miscellany
+33333730	Pillow Pup (French Bulldog)	Miscellany
+33333831	Oinklet (Yellow)	Miscellany
+33333832	Oinklet (Blue)	Miscellany
+33333833	Oinklet (Red)	Miscellany
+33333834	Oinklet (Green)	Miscellany
+33333835	Oinklet (Black)	Miscellany
+33333836	Aloha Kitty Kat (Tabby)	Miscellany
+33333837	Aloha Kitty Kat (Blue)	Miscellany
+33333838	Aloha Kitty Kat (American Short Hair)	Miscellany
+33333839	Aloha Kitty Kat (Calico)	Miscellany
+33333930	Aloha Kitty Kat (Red)	Miscellany
+33333931	Aloha Pengster (Green)	Miscellany
+33333932	Aloha Pengster (Blue)	Miscellany
+33333933	Aloha Pengster (Red)	Miscellany
+33333934	Aloha Pengster (Yellow)	Miscellany
+33333935	Aloha Pengster (Black)	Miscellany
+33333937	Alo-Happy Figure	Miscellany
+33333938	Robo Michio Figure	Miscellany
+33333939	Kamulop Figure (Standard Edition)	Miscellany
+33343030	Kamulop Figure (Shrine Edition)	Miscellany
+33343034	Pocket Tissues	Miscellany
+33343035	Cigarette Butt	Miscellany
+33343036	Stinky Towel	Miscellany
+33343037	Junk	Miscellany
+33343131	Bad Fortune	Miscellany
+33343132	Modest Fortune	Miscellany
+33343133	Good Fortune	Miscellany
+33343134	Great Fortune	Miscellany
+34333333	Trips Yokan	Miscellany
+34333334	10-10-1 Charm	Miscellany
+34333335	Lucky Hanafuda Card	Miscellany
+34333336	Blackjack Amulet	Miscellany
+34333337	Bust Amulet	Miscellany
+34333338	Royal Joker Card	Miscellany
+34333430	Nine Gates Tile	Miscellany
+34333536	Pet Food	Miscellany
+34333537	High-End Pet Food	Miscellany
+34333538	Ultimate Pet Food	Miscellany
+34333635	Flounder	Ingredients
+34333636	Aweoweo	Ingredients
+34333637	Scorpionfish	Ingredients
+34333638	Humuhumunukunukuapua'a	Ingredients
+34333639	Tiger Puffer	Ingredients
+34333730	Bluefin Tuna	Ingredients
+34333731	Mahi Mahi	Ingredients
+34333733	Rhinoceros Beetle	Ingredients
+34333734	Dragonfly	Ingredients
+34333735	Butterfly	Ingredients
+34333736	Silver Rhinoceros Beetle	Ingredients
+34333737	Silver Dragonfly	Ingredients
+34333737	Silver Dragonfly	Ingredients
+34333738	Silver Butterfly	Ingredients
+34333739	Golden Rhinoceros Beetle	Ingredients
+34333830	Golden Dragonfly	Ingredients
+34333831	Golden Butterfly	Ingredients
+34333835	Wild Stewed Meat Bento★	Recovery Items
+34333836	Wild Stewed Meat Bento★★	Recovery Items
+34333837	Wild Stewed Meat Bento ★★★	Recovery Items
+34333838	Fish-Toss Hot Pot Bento★	Recovery Items
+34333839	Fish-Toss Hot Pot Bento★★	Recovery Items
+34333930	Fish-Toss Hot Pot Bento ★★★	Recovery Items
+34333931	Roughly Chopped Stir-Fried Veggie Bento★	Recovery Items
+34333932	Roughly Chopped Stir-Fried Veggie Bento★★	Recovery Items
+34333933	Roughly Chopped Stir-Fried Veggie Bento★★★	Recovery Items
+34333934	Chef's Whimsy Bento ★	Recovery Items
+34333935	Chef's Whimsy Bento ★★	Recovery Items
+34333936	Chef's Whimsy Bento ★★★	Recovery Items
+34333937	Goro Goro Special Steak Meal★	Recovery Items
+34333938	Goro Goro Special Steak Meal★★	Recovery Items
+34333939	Goro Goro Special Steak Meal ★★★	Recovery Items
+34343030	Goro Goro Special Hot Pot Meal★	Recovery Items
+34343031	Goro Goro Special Hot Pot Meal★★	Recovery Items
+34343032	Goro Goro Special Hot Pot Meal ★★★	Recovery Items
+34343033	Goro Goro Luxury Party Platter★	Recovery Items
+34343034	Goro Goro Luxury Party Platter★★	Recovery Items
+34343035	Goro Goro Luxury Party Platter★★★	Recovery Items
+34343036	Goro Goro Awakening Beer★	Recovery Items
+34343037	Goro Goro Awakening Beer ★★	Recovery Items
+34343330	Pirate Party Stew★	Miscellany
+34343331	Pirate Party Stew ★★	Miscellany
+34343332	Pirate Party Stew ★★★	Miscellany
+34343333	Avast! Pirate Party Hell Stew★	Miscellany
+34343334	Avast! Pirate Party Hell Stew ★★	Miscellany
+34343335	Avast! Pirate Party Hell Stew ★★★	Miscellany
+34343339	Pirate Meal For Five★	Miscellany
+34343430	Pirate Meal For Five ★★	Miscellany
+34343431	Pirate Meal For Five ★★★	Miscellany
+34343432	Pirate Meal For Ten ★	Miscellany
+34343433	Pirate Meal For Ten★★	Miscellany
+34343434	Pirate Meal For Ten★★★	Miscellany
+{/ID1}
+{ID2}
+ID>Name>Type
+1169	Coconut Ring	Ring-finger
+1171	Black Tortoise Ring	Ring-finger
+1172	White Tiger Ring	Ring-finger
+1180	S Ring	Ring-finger
+1224	Compass Ring	Ring-finger
+1225	Voyage Ring	Ring-finger
+1226	Ring Of Leaves	Ring-finger
+1227	Ring Of Volcanoes	Ring-finger
+1228	Ring Of Flowers	Ring-finger
+1606	Snake Ring	Ring-finger
+1608	M Ring	Ring-finger
+1628	Ring Of Stone	Ring-finger
+1630	Ring Of Illumination	Ring-finger
+1655	Ring Of Tides	Ring-finger
+1657	Ring Of The Tempest	Ring-finger
+1676	Hawaiian Silver Ring	Ring-finger
+1677	Shark Ring	Ring-finger
+1689	Scope Ring	Ring-finger
+1690	Ring Of Gaia	Ring-finger
+1692	Squid Ring	Ring-finger
+1696	Chain Ring	Ring-finger
+1902	Double Silver Ring	Ring-finger
+1166	Vermillion Phoenix Ring	Ring-thumb
+1170	Ring Of Blossom	Ring-thumb
+1259	Anchor Ring	Ring-thumb
+1605	Champion's Ring	Ring-thumb
+1607	Hannya Ring	Ring-thumb
+1609	Brilliant Ring	Ring-thumb
+1614	Ring Of Earth	Ring-thumb
+1618	Ring Of Frost	Ring-thumb
+1678	Cutlass Ring	Ring-thumb
+1679	Pistol Ring	Ring-thumb
+1680	Chain Hook Ring	Ring-thumb
+1167	Hawaiian Gold Ring	Ring-Little Finger
+1168	Azure Dragon Ring	Ring-Little Finger
+1631	Ring Of Candescence	Ring-Little Finger
+1647	Sakura Ring	Ring-Little Finger
+1656	Ring Of Storms	Ring-Little Finger
+1691	Ring Of The Ocean	Ring-Little Finger
+1713	Sacrifice Ring	Ring-Little Finger
+4391	Roughly Chopped Stir-Fried Veggie Bento★	Recovery Items
+4392	Roughly Chopped Stir-Fried Veggie Bento★★	Recovery Items
+4393	Roughly Chopped Stir-Fried Veggie Bento★★★	Recovery Items
+4388	Fish-Toss Hot Pot Bento★	Recovery Items
+4389	Fish-Toss Hot Pot Bento★★	Recovery Items
+4390	Fish-Toss Hot Pot Bento ★★★	Recovery Items
+4385	Wild Stewed Meat Bento★	Recovery Items
+4386	Wild Stewed Meat Bento★★	Recovery Items
+4387	Wild Stewed Meat Bento ★★★	Recovery Items
+4394	Chef's Whimsy Bento ★	Recovery Items
+4395	Chef's Whimsy Bento ★★	Recovery Items
+4396	Chef's Whimsy Bento ★★★	Recovery Items
+4403	Goro Goro Luxury Party Platter★	Recovery Items
+4404	Goro Goro Luxury Party Platter★★	Recovery Items
+4405	Goro Goro Luxury Party Platter★★★	Recovery Items
+4400	Goro Goro Special Hot Pot Meal★	Recovery Items
+4401	Goro Goro Special Hot Pot Meal★★	Recovery Items
+4402	Goro Goro Special Hot Pot Meal ★★★	Recovery Items
+4397	Goro Goro Special Steak Meal★	Recovery Items
+4398	Goro Goro Special Steak Meal★★	Recovery Items
+4399	Goro Goro Special Steak Meal ★★★	Recovery Items
+2458	Goro Goro Supreme Pot Luck Hot Pot★	Recovery Items
+2367	Goro Goro Supreme Pot Luck Hot Pot★★	Recovery Items
+2368	Goro Goro Supreme Pot Luck Hot Pot★★★	Recovery Items
+4406	Goro Goro Awakening Beer★	Recovery Items
+4407	Goro Goro Awakening Beer ★★	Recovery Items
+2422	Failed Dish	Recovery Items
+3284	Toughness Light	Recovery Items
+3285	Toughness Z	Recovery Items
+3286	Toughness ZZ	Recovery Items
+3287	Toughness Infinity	Recovery Items
+3288	Tauriner	Recovery Items
+3289	Tauriner +	Recovery Items
+3290	Tauriner ++	Recovery Items
+3291	Tauriner Maximum	Recovery Items
+3292	Staminan Light	Recovery Items
+3293	Staminan X	Recovery Items
+3294	Staminan Xx	Recovery Items
+3295	Staminan Royale	Recovery Items
+3296	Staminan Spark	Recovery Items
+3135	Original Musubi	Recovery Items
+3136	3 Pack Croissant Sandwich	Recovery Items
+3137	Pinwheel Wrap	Recovery Items
+3138	Charcuterie Quiche	Recovery Items
+3139	Seafood Bisque	Recovery Items
+3140	Ham & Egg Sandwich	Recovery Items
+3147	Tuna Salad Sandwich	Recovery Items
+3148	Roast Ham Sandwich	Recovery Items
+3156	French Fries	Recovery Items
+3160	Hot Dog	Recovery Items
+3161	Chili Dog	Recovery Items
+3162	Chinese Steamed Bun	Recovery Items
+3166	Fancy Shark Fin Bun	Recovery Items
+3167	Chinese Sticky Rice	Recovery Items
+3168	Chinese Meat Pie	Recovery Items
+3169	Corn Bun	Recovery Items
+3170	Fried Dough Twist	Recovery Items
+3171	Black Sesame Soup	Recovery Items
+3172	Raisin Sponge Cake	Recovery Items
+3173	Roasted Chestnuts	Recovery Items
+3183	Himalayan Salt Potato Chips	Recovery Items
+3184	Black Truffle Potato Chips	Recovery Items
+3185	Bbq Potato Chips	Recovery Items
+3186	Plain Cookie	Recovery Items
+3187	Special Tacos	Recovery Items
+3188	Naan	Recovery Items
+3189	Coconut Chicken Curry	Recovery Items
+3190	Spinach Curry	Recovery Items
+3191	Spicy Mutton Curry	Recovery Items
+3192	Cheese Pizza	Recovery Items
+3193	Pepperoni Pizza	Recovery Items
+3194	Hawaiian Pizza	Recovery Items
+3195	Deluxe Hawaiian Pizza	Recovery Items
+3196	Beef Plate Lunch	Recovery Items
+3197	Salmon Plate Lunch	Recovery Items
+3198	Vegetarian Plate Lunch	Recovery Items
+3199	Ultra Steak Plate Lunch	Recovery Items
+3200	California Roll	Recovery Items
+3201	Spider Roll	Recovery Items
+3202	Spicy Fried Tofu	Recovery Items
+3203	Nourishing Sushi Set	Recovery Items
+3202	Spicy Fried Totu	Recovery Items
+3203	Nourishing Sushi Set	Recovery Items
+3204	Rainbow Bagel	Recovery Items
+3205	Original Açaí Bowl	Recovery Items
+3206	Tropical Açaí Bowl	Recovery Items
+3207	Wild-Caught Sashimi	Recovery Items
+3208	Wild-Caught Fried Shrimp	Recovery Items
+3211	Ahi Poke	Recovery Items
+3214	Moldy Burger	Recovery Items
+3229	Aloha Aina® Hot Coffee	Recovery Items
+3230	Kona Hawaiian Coffee	Recovery Items
+3231	Aloha Beer: Aloha Blonde	Recovery Items
+3232	Aloha Beer: Hiker's Dream	Recovery Items
+3230	Kona Hawaiian Coffee	Recovery Items
+3231	Aloha Beer: Aloha Blonde	Recovery Items
+3232	Aloha Beer: Hiker's Dream	Recovery Items
+3233	Aloha Beer: Hop Lei Ipa	Recovery Items
+1736	Aloha Beer: Mellow Waves	Recovery Items
+2211	Aloha Beer: Froot Lupes Ipa	Recovery Items
+3234	Mineral Water	Recovery Items
+3235	Iced Tea	Recovery Items
+3236	Fruit Juice	Recovery Items
+3237	Cola	Recovery Items
+3238	Zero-Calorie Cola	Recovery Items
+3239	Soda Water	Recovery Items
+3240	Iced Coffee	Recovery Items
+3239	Soda Water	Recovery Items
+3240	Iced Coffee	Recovery Items
+3241	Café Latte	Recovery Items
+3242	Hot Coffee	Recovery Items
+3243	Deluxe Hot Coffee	Recovery Items
+3244	Deluxe Iced Coffee	Recovery Items
+3245	Lassi	Recovery Items
+3246	Boba Milk Tea	Recovery Items
+3247	Brown Sugar Milk Tea	Recovery Items
+3248	Coconut Milk Tea	Recovery Items
+3249	Matcha Milk Tea	Recovery Items
+3251	Coconut Water	Recovery Items
+3252	Lemonade	Recovery Items
+3253	Tony's Lemonade	Recovery Items
+3257	Hawaiian Pale Ale	Recovery Items
+3258	Hawaiian Lager	Recovery Items
+3259	Hawaiian Pilsner	Recovery Items
+3260	Fancy Coffee (Kopi Luwak)	Recovery Items
+3261	Fancy Coffee (Black Ivory)	Recovery Items
+3262	Fancy Sake (Rainbow Bridge)	Recovery Items
+3263	Divine Water	Recovery Items
+3264	Half-Empty Drink	Recovery Items
+3265	Ichiban Special	Recovery Items
+1735	Pirates Special	Recovery Items
+3266	Rainbow	Recovery Items
+3267	Matsumoto's	Recovery Items
+3268	Hawaiian	Recovery Items
+3269	Tropical	Recovery Items
+3270	Soft-Serve Ice Cream	Recovery Items
+3271	Almond Jelly	Recovery Items
+3272	Mango Pudding	Recovery Items
+3273	Strawberry Shave Ice	Recovery Items
+3274	Mango Shave Ice	Recovery Items
+3275	Blue Hawaiian Shave Ice	Recovery Items
+3276	Chocolate Ice Cream	Recovery Items
+3277	Chocolate Mint Ice Cream	Recovery Items
+3269	Tropical	Recovery Items
+3270	Soft-Serve Ice Cream	Recovery Items
+3271	Almond Jelly	Recovery Items
+3272	Mango Pudding	Recovery Items
+3273	Strawberry Shave Ice	Recovery Items
+3274	Mango Shave Ice	Recovery Items
+3275	Blue Hawaiian Shave Ice	Recovery Items
+3276	Chocolate Ice Cream	Recovery Items
+3277	Chocolate Mint Ice Cream	Recovery Items
+3278	Strawberry Crêpe	Recovery Items
+3279	Chocolate Banana Crêpe	Recovery Items
+3280	High-End Assorted Chocolates	Recovery Items
+1944	Red Bull	Recovery Items
+1859	Rabbit Meat	Ingredients
+1860	Pheasant Meat	Ingredients
+1857	Bear Meat	Ingredients
+4373	Rhinoceros Beetle	Ingredients
+4374	Dragonfly	Ingredients
+4375	Butterfly	Ingredients
+2142	Grasshopper	Ingredients
+2118	Moth	Ingredients
+2119	Spider	Ingredients
+2120	Big C	Ingredients
+4376	Silver Rhinoceros Beetle	Ingredients
+4377	Silver Dragonfly	Ingredients
+4377	Silver Dragonfly	Ingredients
+4378	Silver Butterfly	Ingredients
+2282	Silver Grasshopper	Ingredients
+2283	Silver Moth	Ingredients
+2284	Silver Spider	Ingredients
+4379	Golden Rhinoceros Beetle	Ingredients
+4380	Golden Dragonfly	Ingredients
+4381	Golden Butterfly	Ingredients
+2285	Golden Grasshopper	Ingredients
+2294	Golden Moth	Ingredients
+2295	Golden Spider	Ingredients
+2296	Tsuchinoko	Ingredients
+4365	Flounder	Ingredients
+4366	Aweoweo	Ingredients
+4367	Scorpionfish	Ingredients
+1853	Salmon	Ingredients
+4368	Humuhumunukunukuapua'a	Ingredients
+4369	Tiger Puffer	Ingredients
+4370	Bluefin Tuna	Ingredients
+4371	Mahi Mahi	Ingredients
+1356	Oarfish	Ingredients
+3304	Herb	Ingredients
+3302	Coconut	Ingredients
+3300	Quality Mango	Ingredients
+3298	Superb Pineapple	Ingredients
+2139	Potato	Ingredients
+2371	Quality Onion	Ingredients
+2372	Quality Garlic	Ingredients
+3303	Superb Fruit	Ingredients
+96	Egg	Ingredients
+97	Quality Egg	Ingredients
+98	Golden Egg	Ingredients
+99	Fresh Milk	Ingredients
+100	Quality Fresh Milk	Ingredients
+101	Superb Fresh Milk	Ingredients
+1916	Components	Miscellany
+1917	Quality Components	Miscellany
+2067	Superb Components	Miscellany
+2136	Free Magazine	Miscellany
+2137	Fancy Free Magazine	Miscellany
+1839	Beautiful Seashell	Miscellany
+1840	Sharkstone	Miscellany
+1702	Squid Tentacles	Miscellany
+1918	Ethereal Egesta	Miscellany
+1888	Fishing Net	Miscellany
+2234	Materials Net	Miscellany
+2511	Mysterious Net	Miscellany
+3321	Pansy Bouquet	Miscellany
+3322	Lily Bouquet	Miscellany
+3323	Rose Bouquet	Miscellany
+3324	Plumeria Bouquet	Miscellany
+3325	Hibiscus Bouquet	Miscellany
+3326	Coffee Assortment	Miscellany
+3327	Hawaiian Cosmetics	Miscellany
+3328	Postcard Assortment	Miscellany
+3329	Dim Sum Assortment	Miscellany
+3330	Beautiful Painting	Miscellany
+2369	Deluxe Pizza	Miscellany
+2370	Sushi Ori	Miscellany
+1742	Hors D'oeuvres	Miscellany
+2217	Ice Cream Assortment	Miscellany
+2477	Handmade Dried Fruits	Miscellany
+2478	Fruit Party Platter	Miscellany
+2387	Lunch Assortment	Miscellany
+2388	Retort Curry Gift	Miscellany
+1738	Royal Tea Leaf Gift	Miscellany
+3332	Abc Store Gift Set	Miscellany
+3333	Aloha Beer Gift Set	Miscellany
+3334	Matsumoto Shave Ice Gift Set	Miscellany
+3335	Dean & Deluca Gift Set	Miscellany
+1380	Hibiscus Tote Bag Gift Set	Miscellany
+3336	88 Tees Gift Set	Miscellany
+3337	Hilo Hattie Gift Set	Miscellany
+1204	Ai's Photobook (Gift Edition)	Miscellany
+2502	How To Be A Pirate	Miscellany
+2411	How To Be A Mighty Pirate	Miscellany
+4430	Pirate Party Stew★	Miscellany
+4431	Pirate Party Stew ★★	Miscellany
+4432	Pirate Party Stew ★★★	Miscellany
+4433	Avast! Pirate Party Hell Stew★	Miscellany
+4434	Avast! Pirate Party Hell Stew ★★	Miscellany
+4435	Avast! Pirate Party Hell Stew ★★★	Miscellany
+4439	Pirate Meal For Five★	Miscellany
+4440	Pirate Meal For Five ★★	Miscellany
+4441	Pirate Meal For Five ★★★	Miscellany
+4442	Pirate Meal For Ten ★	Miscellany
+4443	Pirate Meal For Ten★★	Miscellany
+4444	Pirate Meal For Ten★★★	Miscellany
+2461	Herb Seeds	Miscellany
+2432	Potato Seedlings	Miscellany
+1739	Quality Onion Seedlings	Miscellany
+2214	Quality Garlic Seedlings	Miscellany
+2138	Superb Seeds	Miscellany
+2247	Plant Growth Stimulant	Miscellany
+2242	Plant Nutrient	Miscellany
+2244	Plant Staminan	Miscellany
+2246	Plant Staminan Spark	Miscellany
+4356	Pet Food	Miscellany
+4357	High-End Pet Food	Miscellany
+4358	Ultimate Pet Food	Miscellany
+2412	Essence Of Pet Snacks ★	Miscellany
+1732	Essence Of Pet Snacks ★★	Miscellany
+2207	Essence Of Pet Snacks ★★★	Miscellany
+4333	Trips Yokan	Miscellany
+4334	10-10-1 Charm	Miscellany
+4335	Lucky Hanafuda Card	Miscellany
+4336	Blackjack Amulet	Miscellany
+4337	Bust Amulet	Miscellany
+4338	Royal Joker Card	Miscellany
+4340	Nine Gates Tile	Miscellany
+3341	Paper Plate	Miscellany
+3342	Iron Plate	Miscellany
+3343	Bronze Plate	Miscellany
+3344	Silver Plate	Miscellany
+3345	Gold Plate	Miscellany
+3346	Platinum Plate	Miscellany
+3346	Platinum Plate	Miscellany
+3350	Simple Wristwatch	Miscellany
+3352	Swiss Watch	Miscellany
+2465	Vintage Luxury Watch	Miscellany
+1873	Shen-San's Panties	Miscellany
+3355	Aiai	Miscellany
+3356	Gongon	Miscellany
+3357	Meemee	Miscellany
+3358	Baby	Miscellany
+3359	Bun-Chan The Java Sparrow (White)	Miscellany
+3360	Bun-Chan The Java Sparrow (Pink)	Miscellany
+3361	Jumbo Bun-Chan	Miscellany
+3369	Pillow Pup (Golden Retriever)	Miscellany
+3370	Pillow Pup (French Bulldog)	Miscellany
+3381	Oinklet (Yellow)	Miscellany
+3382	Oinklet (Blue)	Miscellany
+3383	Oinklet (Red)	Miscellany
+3384	Oinklet (Green)	Miscellany
+3385	Oinklet (Black)	Miscellany
+3386	Aloha Kitty Kat (Tabby)	Miscellany
+3387	Aloha Kitty Kat (Blue)	Miscellany
+3388	Aloha Kitty Kat (American Short Hair)	Miscellany
+3389	Aloha Kitty Kat (Calico)	Miscellany
+3390	Aloha Kitty Kat (Red)	Miscellany
+3391	Aloha Pengster (Green)	Miscellany
+3392	Aloha Pengster (Blue)	Miscellany
+3393	Aloha Pengster (Red)	Miscellany
+3394	Aloha Pengster (Yellow)	Miscellany
+3395	Aloha Pengster (Black)	Miscellany
+3397	Alo-Happy Figure	Miscellany
+3398	Robo Michio Figure	Miscellany
+3399	Kamulop Figure (Standard Edition)	Miscellany
+3400	Kamulop Figure (Shrine Edition)	Miscellany
+1673	Kraken-Chan	Miscellany
+2243	Pirate Boss Bun-Chan	Miscellany
+2260	First Mate Bun-Chan (Orange)	Miscellany
+2245	First Mate Bun-Chan (Pink)	Miscellany
+1938	High Seas Kitty Kat (Red)	Miscellany
+2110	High Seas Kitty Kat (Tiger)	Miscellany
+2254	High Seas Kitty Kat (Blue)	Miscellany
+2257	High Seas Kitty Kat (American Short Hair)	Miscellany
+2256	High Seas Kitty Kat (Calico)	Miscellany
+2255	Queen Michele Figure	Miscellany
+2117	Raymond Law Figure	Miscellany
+3349	Earthworm	Miscellany
+3404	Pocket Tissues	Miscellany
+3405	Cigarette Butt	Miscellany
+3406	Stinky Towel	Miscellany
+3407	Junk	Miscellany
+1749	Empty Can	Miscellany
+2224	Runaway Hat	Miscellany
+2491	Torn Magazine	Miscellany
+3411	Bad Fortune	Miscellany
+3412	Modest Fortune	Miscellany
+3413	Good Fortune	Miscellany
+3414	Great Fortune	Miscellany
+2497	Ichiban Pirate Crew Set	Miscellany
+2498	Ichiban Special Outfit Set	Miscellany
+{/ID2}
