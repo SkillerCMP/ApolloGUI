@@ -892,6 +892,22 @@ public async System.Threading.Tasks.Task RunCollectorPatchAsync(string tempSavep
     {
         if (string.IsNullOrWhiteSpace(txtPatcher.Text)) { System.Windows.MessageBox.Show(this, "Select a patcher exe first.", "Patch", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Warning); return; }
         if (string.IsNullOrWhiteSpace(dataPath) || !System.IO.File.Exists(dataPath)) { System.Windows.MessageBox.Show(this, "Select a data file first.", "Patch", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Warning); return; }
+        // Backup when running from Collector (uses global Settings toggle)
+        if (settings?.BackupEnabled == true)
+        {
+            try
+            {
+                var gameName = patch?.Title ?? "UnknownGame";
+                var zip = BackupManager.CreateBackupZip(settings, Root, gameName, dataPath!);
+                Log($"> Backup created: {zip}");
+            }
+            catch (System.Exception bx)
+            {
+                Log("[!] Backup failed: " + bx.Message);
+            }
+        }
+
+
 
         // Choose endian-specific patcher if DB entry requires
         var patcherPathLocal = txtPatcher.Text;
