@@ -17,6 +17,10 @@ This repo contains the source for ApolloGUI and a packaged Help file with MOD/AM
 - Windows 10+
 - [Apollo CLI](https://github.com/bucanero/apollo-lib/releases)
 
+For Database Files 
+- [Apollo Savepatch Files](https://bucanero.github.io/apollo-patches/)
+- [Discord Usercodes](https://docs.google.com/spreadsheets/d/1pln64WRA8QhhrW1QBDEn97HEbp4gdvBNd3GnrC4Bg5c/edit?gid=0#gid=0)
+
 
 Iv Added 0build_publish_with_assets.bat this will build a x86 and x64 version of the program. if u feel the need to build it. 
 
